@@ -25,10 +25,11 @@
 trig = ["sin()", "cos()", "tan()"]
 ls = ["asin()", "acos()", "atan()"]
 #     0         1         2
-i = -1
-
-for item in ["asin()", "acos()", "atan()"]:
-    i += 2
-    trig.insert(i, item)
-    # print(trig)
+i = -1   
+                                                       
+for item in ["asin()", "acos()", "atan()"]:           
+    i += 2   # In Line 28, i (for index) is set to -1 in order to make i += 2 returns values of 1, 3, 5 once at a time.
+    trig.insert(i, item)    # Why do we have to assign 1, 3, 5 to i (index indicating the position where the item is inserted to the "trig" list each time?
+                            # Take a look at Steps 1 to 3 shown in the above blocks of comment.  
+                            # They are the index indicating where the item is inserted in the updated "trig" list.         
 print(trig)

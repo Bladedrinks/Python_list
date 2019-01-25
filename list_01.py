@@ -1,43 +1,78 @@
-# Program to create a list consisting of powers of 2 (like this: 1, 2, 4, 8, 16, ..., 512,
-# using the for loop and the list.append() method.
+# Program to add natural numbers (starting from 1) to get
+# the sum (sum = 1 + 2 + 3 + ... + n).
 
-# power of 2 is 2 ** x, where x represents the exponents which ranges from 0 to 10 (10 excluded).
-# Each time we pick an integer from the integer range from 0 to 10 (that is, 0, 1, 2, ..., 8, 9)
-# and then assign it to x as in the algebraic expression. Finally, we will be getting
-# 2 ** 0 == 1
-# 2 ** 1 == 2
-# 2 ** 2 == 4
-# 2 ** 3 == 8
-# 2 ** 4 == 16
-# 2 ** 5 == 32
-# 2 ** x == (2 raised to the power of x)
-# 2 ** 9 == 512
-# The question is how to put them together in the ascending order. We can associate it with the method for finding the
-# sum of a number sequence using for loop and the += assignment operator. The list method that may correspond to the +=
-# assignment operator is the list.append() method.
-# x = 0  (Assign 0 to the variable x, which is the starting point)
-# x += 1 or x = x + 1 where x has been set to  0 in the above line, then we get x = 1
-# x += 2 or x = x + 2 where x has been set to  1 in the above line, then we get x = 3
-# x += 3 or x = x + 3 where x has been set to  3 in the above line, then we get x = 6
-# x += 4 or x = x + 4 where x has been set to  6 in the above line, then we get x = 10
-# x += 5 or x = x + 5 where x has been set to 10 in the above line, then we get x = 15
-# ...
-# In the same way, we can create an empty list [] which corresponds to the 0 in the above example as the starting point
-# and then use the list.append() method to add each new item to the list.
-num_seq = []
-for x in range(10):
-    num_seq.append(2 ** x)
-print(num_seq)
+# Take input from the user.
+n = int(input("n = "))
 
+# Initialize sum and counter (that is, to assign initial
+# values to sum and counter)
+# A counter is a variable whose contents are incremented to keep a count.
+SUM = 0
+# Initialize the variable "sum". That is, to assign the initial
+# value to the variable "sum".
+counter = 1
+# Initialize the variable "counter". That is, to assign the initial value
+# to the variable "counter". The variable "counter" is used to help keep
+# the counting go on and on by adding itself to the sum.
 
+while counter <= n:
+    SUM = SUM + counter
+    counter = counter + 1  # Update the counter
 
+# The whole activity of repeating executing the body of while loop is shown below:
 
+# sum                         = 0
+# counter                       = 1
 
+# sum   counter
+# 0     1
+# sum = sum + counter = 0 + 1 = 1
+# counter = counter + 1 = 1 + 1 = 2
 
+# sum   counter
+# 1     2
+# sum = sum + counter = 1 + 2 = 3
+# counter = counter + 1 = 2 + 1 = 3
 
+# sum   counter
+# 3     3
+# sum = sum + counter = 3 + 3 = 6
+# counter = counter + 1 = 3 + 1 = 4
 
+# sum   counter
+# 6     4
+# sum = sum + counter = 6 + 4 = 10
+# counter = counter + 1 = 4 + 1 = 5
 
+# sum   counter
+# 10    5
+# sum = sum + counter= 10 + 5 = 15
+# counter = counter + 1 = 5 + 1 = 6
 
+# sum   counter
+# 15    6
+# sum = sum + counter= 15 + 6 = 21
+# counter = counter + 1 = 6 + 1 = 7
 
+# sum   counter
+# 21    7
+# sum = sum + counter= 21 + 7 = 28
+# counter = counter + 1 = 7 + 1 = 8
 
+# sum   counter
+# 28    8
+# sum = sum + counter= 28 + 8 = 36
+# counter = counter + 1 = 8 + 1 = 9
+
+# sum   counter
+# 36    9
+# sum = sum + counter= 36 + 9 = 45
+# counter = counter + 1= 9 + 1 = 10
+
+# sum   counter
+# 45    10
+# sum = sum + counter=45 + 10 = 55
+# counter =counter + 1= 10 + 1 = 11
+
+print("The sum is", SUM)
 
